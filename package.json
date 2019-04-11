@@ -1,6 +1,8 @@
 {
   "name": "node-koa-mysql",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "A Node project",
+  "author": "summer.vip.20@qq.com <summer.vip.20@qq.com>",
   "private": true,
   "scripts": {
     "start": "node bin/www",
