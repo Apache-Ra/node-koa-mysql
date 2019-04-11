@@ -1,7 +1,10 @@
 /**
- ├── schema
+ ├── 数据表模型
+ └── 文章列表
  └── article.js
  */
+
+
 const moment = require('moment');
 module.exports = function (sequelize, DataTypes) {
     return sequelize.define('article', {

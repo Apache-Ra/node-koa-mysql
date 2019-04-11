@@ -1,10 +1,11 @@
 /**
- ├── modules
+ ├── 模型
+ └── 文章
  └── article.js
  */
 
 // 引入刚刚在第五点建立连接mysql数据库的db.js文件
-const db = require('../config/DBHelp');
+const db = require('../config/DB.config');
 // 引入Sequelize对象
 const Sequelize = db.sequelize;
 // 引入上一步的文章数据表模型文件
@@ -26,7 +27,6 @@ class ArticleModel {
             category: data.category, // 文章分类
         })
     }
-
     /**
      * 查询取文章详情数据
      * @param id  文章ID

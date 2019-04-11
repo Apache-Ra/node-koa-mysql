@@ -1,7 +1,12 @@
 /**
  ├── controllers
+ └── 文章
  └── article.js
  */
+
+const ApiError = require('../error/ApiError')
+const ApiErrorNames = require('../error/ApiErrorNames')
+
 const ArticleModel = require('../modules/article')
 
 class articleController {
@@ -55,8 +60,9 @@ class articleController {
      * @returns {Promise.<void>}
      */
     static async detail(ctx) {
-        let id = ctx.params.id;
-
+        // 获取地址栏参数例如： localhost:8000/api/article/detail/1
+        // let id = ctx.params.id;
+        let id = ctx.query.id;
         if (id) {
             try {
                 // 查询文章详情模型
